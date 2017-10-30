@@ -2,19 +2,21 @@
 <html lang='en'>
 <head>
   <meta charset="utf-8" />
-  <title>Hello world!</title>
+  <title> {% block title %}Home{% endblock %} Hello world!</title>
   <link type="text/css" rel="stylesheet"
         href="static/hello.css" />
 </head>
 <body>
 
+<a href="https://i.ytimg.com/vi/opj9bEXKKPY/maxresdefault.jpg"><button>Home</button></a>
+
 {% extends "master.html" %}
 
-{% block title %}Home{% endblock %}
-
+jjgj
 {% block body %}
-It works!
+It works
 {% endblock %}
+Hello
 
 </body>
 </html>
