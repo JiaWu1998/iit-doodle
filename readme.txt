@@ -1,3 +1,8 @@
+Remember to pull everything first
+
+cd iit-doodle
+git pull origin master
+
 TO RUN THIS THING
 
 cd iit-doodle/hello_flask
