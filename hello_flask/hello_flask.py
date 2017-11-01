@@ -18,7 +18,13 @@ def hello(name):
     """ Displays the page greats who ever comes to visit it.
     """
     return flask.render_template('hello.html', name=name)
-
+    
+@APP.route('/home')
+def home():
+    """Displays home page
+    """
+    return flask.render_template('home.html')
+        
 if __name__ == '__main__':
     APP.debug=True
     APP.run()
