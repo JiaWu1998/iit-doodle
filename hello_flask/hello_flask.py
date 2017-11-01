@@ -11,7 +11,7 @@ APP = flask.Flask(__name__)
 def index():
     """ Displays the index page accessible at '/'
     """
-    return flask.render_template('index.html')
+    return flask.render_template('home.html')
 
 @APP.route('/hello/<name>')
 def hello(name):
@@ -19,11 +19,6 @@ def hello(name):
     """
     return flask.render_template('hello.html', name=name)
     
-@APP.route('/home')
-def home():
-    """Displays home page
-    """
-    return flask.render_template('home.html')
         
 if __name__ == '__main__':
     APP.debug=True
