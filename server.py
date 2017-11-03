@@ -8,16 +8,17 @@ APP = flask.Flask(__name__)
 
 
 @APP.route('/')
-def index():
+def home():
     """ Displays the index page accessible at '/'
     """
     return flask.render_template('home.html')
 
-@APP.route('/hello/<name>')
-def hello(name):
-    """ Displays the page greats who ever comes to visit it.
+@APP.route('/boosted')
+def index():
+    """ Didn't try page
     """
-    return flask.render_template('hello.html', name=name)
+    return flask.render_template('index.html')
+    
     
         
 if __name__ == '__main__':
