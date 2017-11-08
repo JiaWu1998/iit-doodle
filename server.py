@@ -17,11 +17,15 @@ def home():
 def index():
     """ Didn't try page
     """
-    return flask.render_template('index.html')
+    return flask.render_template('indexorigin.html')
     
 @APP.route('/homebtn')
 def home2():
     return flask.render_template('home2.html')
+    
+@APP.route('/drawspace')
+def draw():
+    return flask.render_template('index.html')
     
     
         
