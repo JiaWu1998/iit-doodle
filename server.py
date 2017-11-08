@@ -19,6 +19,10 @@ def index():
     """
     return flask.render_template('index.html')
     
+@APP.route('/homebtn')
+def home2():
+    return flask.render_template('home2.html')
+    
     
         
 if __name__ == '__main__':
