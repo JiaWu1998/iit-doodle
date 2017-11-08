@@ -25,7 +25,7 @@ def home2():
     
 @APP.route('/drawspace')
 def draw():
-    return flask.render_template('indexorigin.html')
+    return flask.render_template('index.html')
     
     
         
