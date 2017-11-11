@@ -8,7 +8,7 @@ var setRadius = function(newRadius){
 	context.lineWidth = radius*2;
 
 	radSpan.innerHTML = radius;
-}
+};
 
 
 var minRad = 0.5,
@@ -21,10 +21,10 @@ var minRad = 0.5,
 
 decRad.addEventListener('click', function(){
 	setRadius(radius-interval);
-})
+});
 
 incRad.addEventListener('click', function(){
 	setRadius(radius+interval);
-})
+});
 
 setRadius(defaultRad);
