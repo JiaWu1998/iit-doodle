@@ -1,3 +1,4 @@
+var radius;
 var setRadius = function(newRadius){
 	if(newRadius<minRad)
 		newRadius = minRad;
