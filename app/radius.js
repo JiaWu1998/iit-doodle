@@ -1,9 +1,10 @@
+var radius;
+
 var setRadius = function(newRadius){
 	if(newRadius<minRad)
 		newRadius = minRad;
 	else if(newRadius>maxRad)
 		newRadius = maxRad;
-	var radius;
 	radius = newRadius;
 	context.lineWidth = radius*2;
 
