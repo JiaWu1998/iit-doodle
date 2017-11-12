@@ -1,36 +1,30 @@
-var canvas= document.getElementById('canvas');
-var context= canvas.getContext('2d');
+var colors = ['black', 'grey', 'white', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
-var radius= 10;
-var dragging = false;
 
-canvas.width= window.innerWidth;
-canvas.height= window.innerHeight;
+for(var i=0, n=colors.length;i<n;i++){
+	var swatch = document.createElement('div');
+	swatch.className = 'swatch';
+	swatch.style.backgroundColor = colors[i];
+	swatch.addEventListener('click', setSwatch);
+	document.getElementById('colors').appendChild(swatch);
+}
 
-context.lineWidth = radius*2;
-
-var putPoint= function(e){
-	if(dragging){
-	context.lineTo(e.clientX, e.clientY);
-	context.stroke();
-	context.beginPath();
-	context.arc(e.clientX, e.clientY, radius, 0, Math.PI*2);
-	context.fill();
-	context.beginPath();
-	context.moveTo(e.clientX, e.clientY);
+function setColor(color){
+	context.fillStyle = color;
+	context.strokeStyle = color;
+	var active = document.getElementsByClassName('active')[0];
+	if(active){
+		active.className = 'swatch';
 	}
-};
+}
 
-var engage = function(e){
-	dragging = true;
-	putPoint(e);
-};
+function setSwatch(e){
+	//identify swatch
+	var swatch = e.target;
+	//set color
+	setColor(swatch.style.backgroundColor);
+	//give active class
+	swatch.className += ' active';
+}
 
-var disengage = function(){
-	dragging = false;
-	context.beginPath();
-};
-
-canvas.addEventListener('mousedown', engage);
-canvas.addEventListener('mousemove', putPoint);
-canvas.addEventListener('mouseup', disengage);
+setSwatch({target: document.getElementsByClassName('swatch')[0]});
