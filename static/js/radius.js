@@ -3,7 +3,7 @@ var setRadius = function(newRadius){
 		newRadius = minRad;
 	else if(newRadius>maxRad)
 		newRadius = maxRad;
-	radius = newRadius;
+	global radius = newRadius;
 	context.lineWidth = radius*2;
 
 	radSpan.innerHTML = radius;
