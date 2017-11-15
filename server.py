@@ -11,21 +11,11 @@ APP = flask.Flask(__name__)
 def home():
     """ Displays the index page accessible at '/'
     """
-    return flask.render_template('home.html')
-
-@APP.route('/boosted')
-def index():
-    """ Didn't try page
-    """
-    return flask.render_template('indexorigin.html')
-    
-@APP.route('/homebtn')
-def home2():
-    return flask.render_template('home2.html')
+    return flask.render_template('index.html')
     
 @APP.route('/drawspace')
 def draw():
-    return flask.render_template('index.html')
+    return flask.render_template('app.html')
     
     
         
