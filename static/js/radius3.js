@@ -1,4 +1,3 @@
-var radius;
 var setRadius = function(newRadius){
 	if(newRadius<minRad)
 		newRadius = minRad;
@@ -11,9 +10,9 @@ var setRadius = function(newRadius){
 }
 
 
-var minRad = 0.5,
+var minRad = 5,
 	maxRad = 100,
-	defaultRad = 20,
+	defaultRad = 5,
 	interval = 5,
 	radSpan = document.getElementById('radval'),
 	decRad = document.getElementById('decrad'),
