@@ -1,9 +1,6 @@
 var canvas= document.getElementById('canvas');
 var context= canvas.getContext('2d');
 
-var dataURL = canvas.toDataURL();
- document.getElementById('canvasImg').src = dataURL;
-
 var radius= 10;
 var dragging = false;
 
@@ -37,3 +34,22 @@ var disengage = function(){
 canvas.addEventListener('mousedown', engage);
 canvas.addEventListener('mousemove', putPoint);
 canvas.addEventListener('mouseup', disengage);
+
+ function saveImage() {
+                var ua = window.navigator.userAgent;
+ 
+                if (ua.indexOf("Chrome") > 0) {
+                    // save image without file type
+                    var canvas = document.getElementById("canvas");
+                    document.location.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+ 
+                    // save image as png
+                    var link = document.createElement('a');
+                    link.download = "test.png";
+                    link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
+                    link.click();
+                }
+                else {
+                    alert("Please use Chrome");
+                }
+            }
