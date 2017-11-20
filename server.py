@@ -16,7 +16,10 @@ def home():
 @APP.route('/drawspace')
 def draw():
     return flask.render_template('app.html')
-    
+
+@APP.route('/fireTest')
+def test():
+    return flask.render_template('firebaseTest.html')
     
         
 if __name__ == '__main__':
