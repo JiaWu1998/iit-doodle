@@ -1,6 +1,9 @@
 var canvas= document.getElementById('canvas');
 var context= canvas.getContext('2d');
 
+var dataURL = canvas.toDataURL();
+ document.getElementById('canvasImg').src = dataURL;
+
 var radius= 10;
 var dragging = false;
 
