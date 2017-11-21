@@ -15,7 +15,7 @@ function saveImage(){
         }
     }
     
-    request.open('POST', '/iit-doodle/static/js/save.php', true);
+    request.open('POST', 'save.php', true);
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     request.send('img='+data);
     
