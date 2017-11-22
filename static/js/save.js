@@ -1,5 +1,5 @@
 // JavaScript File
-var saveButton = document.getElementById('save');
+var saveButton = document.getElementById('submit');
 
 saveButton.addEventListener('click',saveImage);
 
@@ -8,12 +8,12 @@ saveButton.addEventListener('click',saveImage);
     
     var request = new XMLHttpRequest();
     
-    // request.onreadystatechange = function(){
-    //     if(request.readyState == 4 && request.status == 200){
-    //         var response = request.responseText;
+    request.onreadystatechange = function(){
+        if(request.readyState == 4 && request.status == 200){
+            var response = request.responseText;
             window.open(data, '_blank', 'location=0, menubar=0');
-//         }
-//     }
+        }
+    }
     
     request.open('POST', 'save.php', true);
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');

@@ -53,3 +53,4 @@ canvas.addEventListener('mouseup', disengage);
                     alert("Please use Chrome");
                 }
             }
+
