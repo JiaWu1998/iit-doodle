@@ -20,6 +20,7 @@ def draw():
 @APP.route('/fireTest')
 def test():
     return flask.render_template('firebaseTest.html')
+
     
         
 if __name__ == '__main__':

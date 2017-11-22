@@ -1,9 +1,10 @@
-// JavaScript File
+
 var saveButton = document.getElementById('submit');
 
 saveButton.addEventListener('click',saveImage);
 
  function saveImage(){
+
     var data = canvas.toDataURL();
     
     var request = new XMLHttpRequest();
@@ -20,3 +21,5 @@ saveButton.addEventListener('click',saveImage);
     request.send('img='+data);
     
  }
+ 
+ 

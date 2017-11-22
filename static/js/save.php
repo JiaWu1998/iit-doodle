@@ -6,7 +6,7 @@
     
     $img = base64_decode($data);
     
-    $path = '/iit-doodle/static/js/images/' . uniqid() . '.png';
+    $path = '/iit-doodle/static/js/image/' . uniqid() . '.png';
     if(file_put_contents($path, $img)){
         print $path;
     }else{
