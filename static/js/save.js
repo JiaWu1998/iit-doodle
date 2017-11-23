@@ -1,4 +1,4 @@
-
+var canvas = document.getElementById('canvas');
 var saveButton = document.getElementById('submit');
 
 saveButton.addEventListener('click',saveImage);

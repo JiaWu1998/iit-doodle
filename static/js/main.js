@@ -4,8 +4,8 @@ var context= canvas.getContext('2d');
 var radius= 10;
 var dragging = false;
 
-canvas.width= window.innerWidth;
-canvas.height= window.innerHeight;
+canvas.width= 800;
+canvas.height= 800;
 
 context.lineWidth = radius*2;
 
