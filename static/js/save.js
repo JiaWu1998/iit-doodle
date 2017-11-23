@@ -5,7 +5,8 @@ saveButton.addEventListener('click',saveImage);
 
  function saveImage(){
 
-    var data = canvas.toDataURL();
+    //var data = canvas.toDataURL();
+    var data = 'data:image/png;base64,Azfiekwk284728 8489284';
     
     var request = new XMLHttpRequest();
     
