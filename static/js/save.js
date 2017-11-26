@@ -1,15 +1,6 @@
 var canvas = document.getElementById('canvas');
 var saveButton = document.getElementById('submit');
 
-  var config = {
-    apiKey: "AIzaSyCu-Dc7zMz7vkEaus-5yic_ZmdWgh46iuU",
-    authDomain: "iit-doodle-img.firebaseapp.com",
-    databaseURL: "https://iit-doodle-img.firebaseio.com",
-    projectId: "iit-doodle-img",
-    storageBucket: "iit-doodle-img.appspot.com",
-    messagingSenderId: "664829745808"
-  };
-  firebase.initializeApp(config);
   database = firebase.database();
 
 saveButton.addEventListener('click',saveImage);
