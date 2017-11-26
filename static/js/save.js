@@ -6,7 +6,6 @@ saveButton.addEventListener('click',saveImage);
  function saveImage(){
 
     var data = canvas.toDataURL();
-    //var final = 'img='+data;
 
     var request = new XMLHttpRequest();
     
@@ -19,8 +18,7 @@ saveButton.addEventListener('click',saveImage);
     
     request.open('POST', 'save.php', true);
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    request.send('img= 6664g44444');
-    console.log(data);
+    request.send('img='+data);
     
  }
  
